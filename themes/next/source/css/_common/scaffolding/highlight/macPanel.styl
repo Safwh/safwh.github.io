@@ -1,0 +1,103 @@
+/*mac Panel效果代码块相关*/
+.highlight-wrap[data-rel] {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  /*box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.4);*/
+  box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2);
+  margin: 35px 0;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  ::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    background: #fc625d;
+    width: 12px;
+    height: 12px;
+    left: 12px;
+    top: 10px;
+    -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+    box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+    z-index: 1;
+  }
+  &::after {
+    content: attr(data-lang);
+    text-align: right;
+    background: #ebeded;
+    color: #cececf;
+    width: 100%;
+    height: 32px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 32px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0 12px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+.highlight, pre {
+  padding-top: 32px;
+}
+.highlight,
+pre {
+  margin-bottom: 0 !important;
+}
+.copy-btn {
+  z-index: 1;
+  top: 1px !important;
+}
+.highlight .gutter pre {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  text-align: center !important;
+  width: 25px;
+}
+
+
+/*
+table{
+  table-layout: fixed;
+    width: 100% !important;
+}
+*/
+
+table{
+  width: 100% !important;
+}
+
+.gutter{
+  width: 45px;
+  position: absolute;
+  left: 0;
+  top: 32px;
+}
+
+.code{
+  padding-left: 45px !important;
+  pre {
+    width: auto !important;
+    padding-right: 10px !important;
+  }
+} 
